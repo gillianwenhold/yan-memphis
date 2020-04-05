@@ -1,0 +1,226 @@
+// Place all the styles related to the Homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ------------------ FONT FORMATTING ------------------ */
+@font-face {
+  font-family: "Poppins";
+  src:font-url("poppins/Poppins-Thin.otf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:font-url("poppins/Poppins-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:font-url("poppins/Poppins-Medium.otf");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:font-url("poppins/Poppins-SemiBold.otf");
+  font-weight: 700;
+}
+
+* { font-family: "Poppins", "Helvetica", sans-serif }
+/* ------------------ NAVBAR & FOOTER ------------------ */
+
+.navbar {
+  padding: 2em;
+  background-color: #000000;
+  color: #FFFFFF;
+  & > .siteTitle {
+    float: left;
+    max-width: 20em;
+    padding: 1em 2em;
+    & > a {
+      font-weight: medium;
+      line-height: 1.2em;
+      font-size: 1.5em;
+      text-decoration: none;
+      color: #FFFFFF;
+      text-overflow: wrap;
+      &:hover {
+        color: #1F7A8C;
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2em;
+    overflow: hidden;
+    li {
+      float: right;
+      a {
+        // max-width: 10em;
+        text-decoration: none;
+        text-overflow: wrap;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-align: center;
+        vertical-align: middle;
+        padding-left: 2em;
+        letter-spacing: 0.15em;
+        &:hover {
+          color: #1F7A8C;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  min-height: 5em;
+  position: fixed-bottom;
+  bottom: 0px;
+  background-color: #000000;
+  &Text {
+    color: #FFFFFF;
+    font-size: .8em;
+    float: right;
+    padding: 2.5em 3em;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+  }
+}
+
+/* ------------------ BACKGROUNDS ------------------ */
+
+.background {
+  background-image: image-url('laptop.jpeg');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &Title {
+    color: #FFFFFF;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 4em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+  &Text {
+    color: #FFFFFF;
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: -1em;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+}
+
+.layer {
+  background-color: rgba(12, 48, 56, 0.75);
+  position: absolute;
+  height: 500px;
+  width: 100%;
+}
+
+/* ------------------ TEXT & BUTTONS ------------------ */
+.title {
+  display: inline-block;
+  margin: 0;
+}
+
+.project-card {
+  margin-bottom: 5em;
+}
+
+.project-header {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: .1em;
+  margin: 2em auto;
+  font-weight: 300;
+  color: #1F7A8C;
+  border: 2px solid #1F7A8C;
+  padding: .75em 1em;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  &Project {
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: .1em;
+    font-weight: 300;
+    color: #1F7A8C;
+    margin: 0 1em;
+    border: 2px solid #1F7A8C;
+    padding: .5em;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+  }
+  &:hover {
+    background-color: #1F7A8C;
+    color: #FFF;
+  }
+}
+
+/* ------------------ MOBILE ------------------ */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 2em 2.5em;
+  }
+  .navbar-text {
+    font-weight: 300;
+  }
+
+  .navbar-text-small {
+    font-weight: 300;
+    margin-left: -5px;
+  }
+
+  .layer {
+    margin-top: -2px;
+    height: 502px;
+  }
+
+  .navbar-text {
+    margin-top: .3em;
+    font-size: .85em;
+  }
+
+  .navbar-head {
+    font-size: 1.2em;
+  }
+
+  .col-1 {
+    width: 55%;
+  }
+
+  .col-2 {
+    width: 45%;
+  }
+
+  .background-title {
+    font-size: 2em;
+    margin-top: 6em;
+  }
+
+  .footer {
+    margin-bottom: 0px;
+    &Text {
+      font-weight: 300;
+      color: white;
+      text-align: center;
+      padding-top: 2.5em;
+      margin: 0;
+    }
+  }
+}
