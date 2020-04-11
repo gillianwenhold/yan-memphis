@@ -1,0 +1,9 @@
+<div class='vw-100 vh-100 d-flex align-items-center justify-content-center'>
+  <h1>COVID Resources Poll</h1>
+  <p class='lead'><%= @poll.title %></p>
+  <hr class='my-4' />
+  <%= @options.each do |option| %>
+  <% end %>
+  <p><%= option.title %></p>
+  <a href='/home' class='btn btn-lg custom-button'>Submit</a>
+</div>

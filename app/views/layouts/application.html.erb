@@ -12,6 +12,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="contentContainer">
+      <div class="yanNavbar">
+        <div class="siteTitle">
+          <%= link_to home_path, 'Youth Action Network of Memphis' %>
+        </div>
+        <ul>
+          <li><a class="navbarText" href="mailto:change@bridgesusa.org">Contact</a></li>
+          <li><a class="navbarText" href="/covid_resources">COVID-19 Resources</a></li>
+        </ul>
+      </div>
+      <div class="mainContent">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="yanFooter">
+      <p class="yanFooterText">CREATED BY BRIDGE BUILDERS CHANGE</p>
+    </div>
   </body>
 </html>

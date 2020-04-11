@@ -4,13 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.0'
 
 gem 'bootstrap-sass'
-gem 'graphql'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'puma', '~> 3.11'
 # READ MORE ABOUT THIS BEFORE GONIG LIVE https://github.com/cyu/rack-cors/
 gem 'pg'
-gem 'rack-cors'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'react-rails'
 gem 'sass-rails', '~> 5.0'
@@ -18,7 +16,6 @@ gem 'sprockets'
 gem 'sprockets-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
