@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const CovidResources = () => (
   <div className='vw-100 vh-100 d-flex align-items-center justify-content-center'>
-  <div className='jumbotron jumbotron-fluid bg-transparent'>
     <h1>COVID Resources</h1>
     <p className='lead'>{poll.title}</p>
     <hr className='my-4' />
@@ -16,7 +15,6 @@ const CovidResources = () => (
       Submit
     </Link>
   </div>
-</div>
 )
 
 export default CovidResources

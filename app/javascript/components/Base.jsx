@@ -24,19 +24,17 @@ const Home = () => {
 
   return (
     <div className='vw-100 vh-100 d-flex align-items-center justify-content-center'>
-      <div className='jumbotron jumbotron-fluid bg-transparent'>
-        <h1>COVID Resources Poll</h1>
-        <p className='lead'>{poll.title}</p>
-        <hr className='my-4' />
-        <p></p>
-        <Link
-          to='/home'
-          className='btn btn-lg custom-button'
-          role='button'
-        >
-          Submit
-        </Link>
-      </div>
+      <h1>COVID Resources Poll</h1>
+      <p className='lead'>{poll.title}</p>
+      <hr className='my-4' />
+      <p></p>
+      <Link
+        to='/home'
+        className='btn btn-lg custom-button'
+        role='button'
+      >
+        Submit
+      </Link>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
@@ -8,8 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import App from '../components/App';
 
+import * as serviceWorker from './serviceWorker';
+
 const link = createHttpLink({
-  uri: 'http://localhost:3000//graphql'
+  uri: 'http://www.youthaction901.com/graphql'
 })
 
 const client = new ApolloClient({
@@ -17,11 +19,10 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-document.addEventListener("DOMContentLoaded", () => {
-  render(
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>,
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
     document.body.appendChild(document.createElement("div"))
   );
 });
