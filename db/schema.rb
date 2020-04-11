@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2020_04_07_223729) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "options", force: :cascade do |t|
     t.string "name"
-    t.integer "poll_id"
+    t.bigint "poll_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["poll_id"], name: "index_options_on_poll_id"
@@ -27,8 +30,8 @@ ActiveRecord::Schema.define(version: 2020_04_07_223729) do
   end
 
   create_table "responses", force: :cascade do |t|
-    t.integer "option_id"
-    t.integer "poll_id"
+    t.bigint "option_id"
+    t.bigint "poll_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["option_id"], name: "index_responses_on_option_id"
