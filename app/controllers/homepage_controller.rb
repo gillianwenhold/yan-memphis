@@ -1,6 +1,6 @@
 class HomepageController < ApplicationController
   def index
-    @post = Post.first
+    @post = ::Post.first
     @options = @post.options
   end
 
