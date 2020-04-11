@@ -58,6 +58,7 @@ body {
     ul {
       list-style-type: none;
       margin-left: auto;
+      padding-top: 1em;
       li {
         float: right;
         a {
@@ -68,7 +69,7 @@ body {
           text-transform: uppercase;
           color: #FFFFFF;
           text-align: center;
-          vertical-align: middle;
+          vertical-align: bottom;
           padding-left: 2em;
           letter-spacing: 0.15em;
           &:hover {
@@ -80,7 +81,7 @@ body {
   }
 
   .mainContent {
-    padding: 0 10em;
+    padding: 2em 10em;
   }
 }
 
