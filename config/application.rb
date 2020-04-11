@@ -17,8 +17,8 @@ module YanMemphis
     # the framework and any gems in your application.
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'youthaction901.com'
-        resource 'youthaction901.com', headers: :any, methods: [:get, :post, :options]
+        origins 'http://localhost:3000', 'https://yan-memphis.herokuapp.com/' #replace this url with that of your own heroku client app
+        resource '*', :headers => :any, :methods => [:get]
       end
     end
   end

@@ -9,7 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import App from '../components/App';
 
 const link = createHttpLink({
-  uri: 'http://www.youthaction901.com/graphql'
+  uri: 'https://yan-memphis.herokuapp.com/graphql'
 })
 
 const client = new ApolloClient({
@@ -17,9 +17,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-document.addEventListener("DOMContentLoaded", () => (
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
-  document.body.appendChild(document.createElement("div")
-)
+document.addEventListener("DOMContentLoaded", () => {
+  render(
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>,
+    document.body.appendChild(document.createElement("div"))
+  );
+});
