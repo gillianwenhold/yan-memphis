@@ -13,12 +13,14 @@ const App = () => {
   return (
     <>
       <Router history={history}>
-        <Header />
-        <Switch>
-        <Route path='/covid_resources' exact component={CovidResources} />
-        <Route path='/home' exact component={Home} />
-        <Route path='/' exact component={Base} />
-        </Switch>
+        <div className={'contentContainer'}>
+          <Header />
+          <Switch>
+          <Route path='/covid_resources' exact component={CovidResources} />
+          <Route path='/home' exact component={Home} />
+          <Route path='/' exact component={Base} />
+          </Switch>
+        </div>
       </Router>
       <Footer />
     </>
