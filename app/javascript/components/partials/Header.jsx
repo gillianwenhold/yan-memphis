@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => (
-  <div className="navbar">
+  <div className="yanNavbar">
     <div className="siteTitle">
       <Link to={'/home'}>
         {'Youth Action Network of Memphis'}

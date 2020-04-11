@@ -1,8 +1,8 @@
 import React from "react";
 
 const Footer = () => (
-  <div className={"footer"}>
-    <p className={"footerText"}>CREATED BY BRIDGE BUILDERS CHANGE</p>
+  <div className={"yanFooter"}>
+    <p className={"yanFooterText"}>CREATED BY BRIDGE BUILDERS CHANGE</p>
   </div>
 )
 
