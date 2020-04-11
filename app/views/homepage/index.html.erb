@@ -2,8 +2,8 @@
   <h1>COVID Resources Poll</h1>
   <p class='lead'><%= @poll.title %></p>
   <hr class='my-4' />
-  <%= @options.each do |option| %>
+  <% @options.each do |option| %>
+    <p><%= option.name %></p>
   <% end %>
-  <p><%= option.title %></p>
   <a href='/home' class='btn btn-lg custom-button'>Submit</a>
 </div>

@@ -1,7 +1,7 @@
 class HomepageController < ApplicationController
   def index
-    @post = ::Post.first
-    @options = @post.options
+    @poll = ::Poll.first
+    @options = @poll.options
   end
 
   def covid_resources; end
