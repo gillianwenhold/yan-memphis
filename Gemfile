@@ -8,7 +8,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'puma', '~> 3.11'
 # READ MORE ABOUT THIS BEFORE GONIG LIVE https://github.com/cyu/rack-cors/
 gem 'rack-cors'
-gem 'sqlite3'
+gem 'pg'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'react-rails'
 gem 'sass-rails', '~> 5.0'
