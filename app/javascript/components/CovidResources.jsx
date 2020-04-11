@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CovidResources = () => (
   <div className='vw-100 vh-100 d-flex align-items-center justify-content-center'>
     <h1>COVID Resources</h1>
-    <p className='lead'>{poll.title}</p>
+    <p className='lead'>Resources for COVID-19</p>
     <hr className='my-4' />
     <p></p>
     <Link
