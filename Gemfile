@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
+gem 'bootstrap-sass'
 gem 'graphql'
 gem 'jbuilder', '~> 2.5'
 gem 'puma', '~> 3.11'
@@ -12,6 +13,8 @@ gem 'pg'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'react-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'sprockets'
+gem 'sprockets-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
