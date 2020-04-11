@@ -1,17 +1,20 @@
 import React from 'react'
+import { ApolloProvider } from 'react-apollo'
 import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
+import { client } from '../packs/apollo'
 import Home from './Home'
 import CovidResources from './CovidResources'
 import Footer from './partials/Footer'
 import Header from './partials/Header'
 import Base from './Base'
+
 const App = () => {
   const history = createBrowserHistory();
 
   return (
-    <>
+    <ApolloProvider client={client}>
       <Router history={history}>
         <div className={'contentContainer'}>
           <Header />
@@ -25,7 +28,7 @@ const App = () => {
         </div>
       </Router>
       <Footer />
-    </>
+    </ApolloProvider>
   )
 }
 
