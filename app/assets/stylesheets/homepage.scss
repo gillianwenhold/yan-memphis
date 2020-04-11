@@ -18,7 +18,7 @@
 @font-face {
   font-family: "Poppins";
   src:font-url("poppins/Poppins-Medium.otf");
-  font-weight: medium;
+  font-weight: 500;
 }
 
 @font-face {
@@ -37,7 +37,7 @@ body {
 .contentContainer {
   min-height: calc(100vh - 5em);
   .navbar {
-    padding: 2em 3em;
+    padding: 1em 3em;
     display: flex;
     background-color: #000000;
     color: #FFFFFF;
