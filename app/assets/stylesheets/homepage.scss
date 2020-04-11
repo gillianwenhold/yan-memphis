@@ -38,19 +38,18 @@ body {
   min-height: calc(100vh - 5em);
   .navbar {
     padding: 2em 3em;
+    display: flex;
     background-color: #000000;
     color: #FFFFFF;
     & > .siteTitle {
       float: left;
-      max-width: 20em;
-      padding: 1em 2em;
+      max-width: 14em;
       & > a {
         font-weight: medium;
         line-height: 1.2em;
         font-size: 1.5em;
         text-decoration: none;
         color: #FFFFFF;
-        text-overflow: wrap;
         &:hover {
           color: #1F7A8C;
         }
@@ -58,15 +57,11 @@ body {
     }
     ul {
       list-style-type: none;
-      margin: 0;
-      padding: 0 2em;
-      overflow: hidden;
+      margin-left: auto;
       li {
         float: right;
         a {
-          // max-width: 10em;
           text-decoration: none;
-          text-overflow: wrap;
           display: inline-block;
           font-size: 1em;
           font-weight: 200;
@@ -88,12 +83,13 @@ body {
 .footer {
   width: 100%;
   height: 5em;
+  display: flex;
   background-color: #000000;
   &Text {
     color: #FFFFFF;
+    margin: auto;
     font-size: .8em;
     float: right;
-    padding: 2.5em 3em;
     font-weight: 200;
     letter-spacing: 0.2em;
   }
