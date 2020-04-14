@@ -1,0 +1,14 @@
+<% resources.each do |resource| %>
+  <div class="row">
+    <div class="col-lg-3">
+      <%= image_tag("#{resource.image}") %>
+    </div>
+    <div class="col-lg-9">
+      <h1><%= resource.name %></h1>
+      <h4>What is it?<%= resource.about %></h4>
+      <p>Details: <%= resource.details %></p>
+      <p>Notes from the suggester: <%= resource.notes %></p>
+      <a href="<%= resource.link %>" target="_blank">Go here to learn more: <%= resource.link_text %></a>
+    </div>
+  </div>
+<% end %>
