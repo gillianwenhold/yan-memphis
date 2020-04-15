@@ -1,10 +1,10 @@
 <% resources.each do |resource| %>
-  <div class="row">
-    <div class="col-lg-3">
+  <div class="resourceRow pb-3">
+    <div class="resourceImage">
       <%= image_tag("#{resource.image}") %>
     </div>
-    <div class="col-lg-9">
-      <h1><%= resource.name %></h1>
+    <div class="resourceInfo">
+      <h2><%= resource.name %></h2>
       <h4>What is it?<%= resource.about %></h4>
       <p>Details: <%= resource.details %></p>
       <p>Notes from the suggester: <%= resource.notes %></p>
