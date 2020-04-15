@@ -5,10 +5,18 @@
     </div>
     <div class="resourceInfo">
       <h2><%= resource.name %></h2>
-      <h4>What is it?<%= resource.about %></h4>
-      <p>Details: <%= resource.details %></p>
-      <p>Notes from the suggester: <%= resource.notes %></p>
-      <p>Go here to learn more: <a href="<%= resource.link %>" target="_blank"><%= resource.link_text %></a></p>
+      <% if resource.about.present? %>
+        <h4>What is it? <span><%= resource.about %></h4>
+      <% end %>
+      <% if resource.details.present? %>
+        <h4>Details: <span><%= resource.details %></span></h4>
+      <% end %>
+      <% if resource.notes.present? %>
+        <h4>Notes from the suggester: <span><%= resource.notes %></span></h4>
+      <% end %>
+      <% if resource.link.present? %>
+        <h4>Go here to learn more: <a href="<%= resource.link %>" target="_blank"><%= resource.link_text %></a></h4>
+      <% end %>
     </div>
   </div>
 <% end %>

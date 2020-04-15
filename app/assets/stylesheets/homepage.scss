@@ -250,8 +250,17 @@ body {
     padding-left: 2em;
     max-width: 75%;
 
-    p, a {
+    h4 {
+      padding-top: .2em;
+      line-height: 1.3;
+    }
+
+    a {
       font-weight: 300;
+    }
+
+    p, span {
+      font-weight: 200;
     }
   }
 }
