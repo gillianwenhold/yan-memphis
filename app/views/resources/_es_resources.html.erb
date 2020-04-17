@@ -1,0 +1,33 @@
+<% resources.each do |resource| %>
+  <div class="resourceRow">
+    <div class="resourceImage">
+      <% if resource.image.present? %>
+        <%= image_tag("#{resource.image}") %>
+      <% end %>
+    </div>
+    <div class="resourceInfo">
+      <h3><%= resource.name %></h3>
+      <% if resource.about.present? %>
+        <h4>Qué es esto? <span><%= resource.about %></h4>
+      <% end %>
+      <% if resource.details.present? %>
+        <h4>Detalles: <span><%= resource.details %></span></h4>
+      <% end %>
+      <% if resource.notes.present? %>
+        <h4>Una Nota del Sugerente: <span><%= resource.notes %></span></h4>
+      <% end %>
+      <% if resource.link.present? %>
+        <% if resource.link_2.present? %>
+          <h4>Visite aquí para obtener más información: </h4>
+          <div><a href="<%= resource.link %>" target="_blank"><%= resource.link_text %></a></div>
+          <div><a href="<%= resource.link_2 %>" target="_blank"><%= resource.link_text_2 %></a></div>
+          <% if resource.link_3.present? %>
+            <div><a href="<%= resource.link_3 %>" target="_blank"><%= resource.link_text_3 %></a></div>
+          <% end %>
+        <% else %>
+          <h4>Visite aquí para obtener más información: <a href="<%= resource.link %>" target="_blank"><%= resource.link_text %></a></h4>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

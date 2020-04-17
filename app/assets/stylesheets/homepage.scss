@@ -121,6 +121,18 @@ body {
   }
 }
 
+button {
+  a {
+    font-weight: 500 !important;
+  }
+  &:hover {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
 /* ------------------ TEXT & BUTTONS ------------------ */
 .title {
   display: inline-block;
@@ -209,12 +221,13 @@ body {
 .card-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-content: flex-start;
   height: 22em;
   margin: 2em -1em;
 
   .link-card {
-    max-width: 18em;
+    width: 18em;
     transition: all .3s;
     padding: 1em;
     &:hover {
@@ -224,7 +237,7 @@ body {
       max-width: 16em;
 
       img {
-        max-width: 18em;
+        max-width: 16em;
         max-height: 14em;
       }
     }
