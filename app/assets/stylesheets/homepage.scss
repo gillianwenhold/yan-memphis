@@ -2,10 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* ------------------ FONT FORMATTING ------------------ */
+/* ------------------ GLOBAL VARIABLES ------------------ */
 @font-face {
   font-family: "Poppins";
-  src:font-url("poppins/Poppins-Thin.otf");
+  src:font-url("poppins/Poppins-ExtraLight.otf");
   font-weight: 200;
 }
 
@@ -17,6 +17,12 @@
 
 @font-face {
   font-family: "Poppins";
+  src:font-url("poppins/Poppins-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
   src:font-url("poppins/Poppins-Medium.otf");
   font-weight: 500;
 }
@@ -24,51 +30,98 @@
 @font-face {
   font-family: "Poppins";
   src:font-url("poppins/Poppins-SemiBold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:font-url("poppins/Poppins-Bold.otf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:font-url("poppins/Poppins-ExtraBold.otf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:font-url("poppins/Poppins-Black.otf");
+  font-weight: 900;
 }
 
 * { font-family: "Poppins", "Helvetica", sans-serif }
 
-h4 {
-  padding-top: .2em;
-  line-height: 1.5;
-}
-
-a, p {
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-span {
-  font-weight: 200;
-  line-height: 1.5;
-}
+$bb-green: #76B700 !default;
+$bb-blue: #3B7CCA !default;
+$dark-gray: #2B2D2F !default;
 
 /* ------------------ MAIN CONTENT ------------------ */
 
 body {
   margin: 0;
-  
+  height: 100%;
+  width: 100%;
+  h1 { font-weight: 600; }
+  h4 {
+    padding-top: .2em;
+    line-height: 1.5;
+  }
+  a {
+    color: $bb-blue;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  span {
+    font-weight: 200;
+    line-height: 1.5;
+  }
+
+  .btn {
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: .1em;
+    margin: 2em auto;
+    font-weight: 300;
+    color: $bb-blue;
+    border: 2px solid $bb-blue;
+    padding: .75em 1em;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    transition: all 0.15s;
+    &:hover {
+      background-color: $bb-blue;
+      color: #FFF;
+    }
+  }
+
   .contentContainer {
-    min-height: calc(100vh - 5em);
-    overflow-y: scroll;
-  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
     .yanNavbar {
-      padding: 1em 3em;
+      padding: 1.25em 3em;
       display: flex;
-      background-color: #000000;
+      background-color: $bb-green;
       color: #FFFFFF;
       & > .siteTitle {
         float: left;
         max-width: 22%;
         & > a {
-          font-weight: medium;
+          letter-spacing: 0.05em;
+          font-weight: 600;
           line-height: 1.2em;
           font-size: 1.5em;
           text-decoration: none;
           color: #FFFFFF;
           &:hover {
-            color: #1F7A8C;
+            color: $dark-gray;
           }
         }
       }
@@ -81,8 +134,8 @@ body {
           a {
             text-decoration: none;
             display: inline-block;
-            font-size: 1em;
-            font-weight: 200;
+            font-size: 1.2em;
+            font-weight: 300;
             text-transform: uppercase;
             color: #FFFFFF;
             text-align: center;
@@ -90,7 +143,7 @@ body {
             padding-left: 2em;
             letter-spacing: 0.15em;
             &:hover {
-              color: #1F7A8C;
+              color: $dark-gray;
             }
           }
         }
@@ -99,19 +152,34 @@ body {
   
     .mainContent {
       padding: 2em 10em;
-
-      .intro-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      flex-grow: 1;
+      p.lead {
+        font-weight: 200;
       }
+      button.toggle-language {
+        float: right;
+        a {
+          font-weight: 500 !important;
+        }
+        &:hover {
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+        &.show-page {
+          margin-top: .5em;
+        }
+      }
+  
       .card-box {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-content: flex-start;
-        height: 22em;
         margin: 2em -1em;
+
         .link-card {
           width: 18em;
           transition: all .3s;
@@ -136,7 +204,7 @@ body {
       .resourceRow {
         display: flex;
         padding: 2em 0;
-        border-bottom: .05em solid gray;
+        border-bottom: .08em solid $dark-gray;
         .resourceImage {
           position: inline-block;
           width: 20%;
@@ -161,85 +229,44 @@ body {
           }
         }
       }
+  
+      .email-us {
+        margin-top: 2em;
+      }    
     }
   }
   
   .yanFooter {
     width: 100%;
-    height: 5em;
-    bottom: 0;
-    position: relative;
+    height: 8em;
+    background-color: $dark-gray;
     display: flex;
-    margin-top: 2em;
-    background-color: #000000;
+    vertical-align: middle;
+  
     &Text {
       color: #FFFFFF;
-      margin: auto;
       font-size: .8em;
-      float: right;
+      margin: auto 2em auto auto;
       font-weight: 200;
       letter-spacing: 0.2em;
+      max-width: 30%;
     }
-  }
   
-  button.toggle-language {
-    float: right;
-    a {
-      font-weight: 500 !important;
-    }
-    &:hover {
-      a {
-        color: white;
-        text-decoration: none;
-      }
-    }
-    &.show-page {
-      margin-top: .5em;
+    img {
+      object-fit: cover;
+      margin-top: auto;
+      margin-bottom: auto;
+      display: inline-block;
+      padding: .5em 1em;
+      height: 80%;
     }
   }
-}
-
-/* ------------------ TEXT & BUTTONS ------------------ */
-.btn {
-  text-decoration: none;
-  display: inline-block;
-  letter-spacing: .1em;
-  margin: 2em auto;
-  font-weight: 300;
-  color: #1F7A8C;
-  border: 2px solid #1F7A8C;
-  padding: .75em 1em;
-  border-radius: 5px;
-  background-color: #FFFFFF;
-  &Project {
-    text-decoration: none;
-    display: inline-block;
-    letter-spacing: .1em;
-    font-weight: 300;
-    color: #1F7A8C;
-    margin: 0 1em;
-    border: 2px solid #1F7A8C;
-    padding: .5em;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-  }
-  &:hover {
-    background-color: #1b69b8;
-    color: #FFF;
-  }
-}
-
-.email-us {
-  margin-top: 2em;
 }
 
 /* ------------------ MOBILE ------------------ */
 @media only screen and (max-width: 600px) {
   body {
     .contentContainer {
-      height: 100%;
-      overflow-y: scroll;   
-  
       .yanNavbar {
         padding: .75em 1.25em;
         & > .siteTitle {
@@ -254,7 +281,6 @@ body {
         }
         ul li a {
           font-size: .9em;
-          font-weight: 300;
           padding-left: 1em;
           letter-spacing: 0.15em;
         }
@@ -262,7 +288,7 @@ body {
   
       .mainContent {
         padding: 2em;
-        span {
+        a, span, p.lead {
           font-weight: 300;
         }
         .card-box {
@@ -271,7 +297,7 @@ body {
         }
         .resourceRow {
           width: 100%;
-          border-bottom: .05em solid gray;
+          border-bottom: .08em solid $dark-gray;
           flex-direction: column;
           .resourceImage {
             margin: auto;
@@ -280,8 +306,10 @@ body {
           }
           .resourceInfo {
             position: inline-block;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
             width: 90%;
+            padding-left: 0;
             h4 {
               padding-top: .18em;
               line-height: 1.2;
@@ -290,27 +318,26 @@ body {
               font-weight: 300;
             }
           }
+          button.toggle-language {
+            float: none;
+            margin: 0;
+            &.show-page {
+              margin-top: .5em;
+            }
+          }
         }
       }
-  
-      button.toggle-language {
-        float: none;
-        margin: 0;
-        &.show-page {
-          margin-top: .5em;
+
+      .footer {
+        margin-top: auto;
+        &Text {
+          font-weight: 300;
+          color: white;
+          text-align: center;
+          padding-top: 2.5em;
+          margin: 0;
         }
       }
     } 
-  
-    .footer {
-      margin-bottom: 0px;
-      &Text {
-        font-weight: 300;
-        color: white;
-        text-align: center;
-        padding-top: 2.5em;
-        margin: 0;
-      }
-    }
   }
 }
