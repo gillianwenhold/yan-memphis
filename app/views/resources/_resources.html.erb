@@ -1,10 +1,12 @@
 <% resources.each do |resource| %>
-  <div class="resourceRow pb-3">
+  <div class="resourceRow">
     <div class="resourceImage">
-      <%= image_tag("#{resource.image}") %>
+      <% if resource.image.present? %>
+        <%= image_tag("#{resource.image}") %>
+      <% end %>
     </div>
     <div class="resourceInfo">
-      <h2><%= resource.name %></h2>
+      <h3><%= resource.name %></h3>
       <% if resource.about.present? %>
         <h4>What is it? <span><%= resource.about %></h4>
       <% end %>
@@ -15,7 +17,16 @@
         <h4>Notes from the suggester: <span><%= resource.notes %></span></h4>
       <% end %>
       <% if resource.link.present? %>
-        <h4>Go here to learn more: <a href="<%= resource.link %>" target="_blank"><%= resource.link_text %></a></h4>
+        <% if resource.link_2.present? %>
+          <h4>Check out these links for more information: </h4>
+          <div><a href="<%= resource.link %>" target="_blank"><%= resource.link_text %></a></div>
+          <div><a href="<%= resource.link_2 %>" target="_blank"><%= resource.link_text_2 %></a></div>
+          <% if resource.link_3.present? %>
+            <div><a href="<%= resource.link_3 %>" target="_blank"><%= resource.link_text_3 %></a></div>
+          <% end %>
+        <% else %>
+          <h4>Go here to learn more: <a href="<%= resource.link %>" target="_blank"><%= resource.link_text %></a></h4>
+        <% end %>
       <% end %>
     </div>
   </div>

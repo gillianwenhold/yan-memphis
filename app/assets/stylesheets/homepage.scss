@@ -28,6 +28,22 @@
 }
 
 * { font-family: "Poppins", "Helvetica", sans-serif }
+
+h4 {
+  padding-top: .2em;
+  line-height: 1.5;
+}
+
+a, p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+span {
+  font-weight: 200;
+  line-height: 1.5;
+}
+
 /* ------------------ NAVBAR & FOOTER ------------------ */
 
 body {
@@ -36,6 +52,8 @@ body {
 
 .contentContainer {
   min-height: calc(100vh - 5em);
+  overflow-y: scroll;
+
   .yanNavbar {
     padding: 1em 3em;
     display: flex;
@@ -88,7 +106,10 @@ body {
 .yanFooter {
   width: 100%;
   height: 5em;
+  bottom: 0;
+  position: relative;
   display: flex;
+  margin-top: 2em;
   background-color: #000000;
   &Text {
     color: #FFFFFF;
@@ -98,40 +119,6 @@ body {
     font-weight: 200;
     letter-spacing: 0.2em;
   }
-}
-
-/* ------------------ BACKGROUNDS ------------------ */
-
-.background {
-  background-image: image-url('laptop.jpeg');
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &Title {
-    color: #FFFFFF;
-    font-size: 3em;
-    text-align: center;
-    margin-top: 4em;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-  }
-  &Text {
-    color: #FFFFFF;
-    font-size: 1em;
-    font-weight: 300;
-    margin-top: -1em;
-    letter-spacing: 0.15em;
-    text-align: center;
-  }
-}
-
-.layer {
-  background-color: rgba(12, 48, 56, 0.75);
-  position: absolute;
-  height: 500px;
-  width: 100%;
 }
 
 /* ------------------ TEXT & BUTTONS ------------------ */
@@ -234,10 +221,12 @@ body {
 
 .resourceRow {
   display: flex;
+  padding: 2em 0;
+  border-bottom: .05em solid gray;
 
   .resourceImage {
     position: inline-block;
-    width: 23%;
+    width: 20%;
     padding-top: 2em;
 
     img {
@@ -248,11 +237,11 @@ body {
   .resourceInfo {
     position: inline-block;
     padding-left: 2em;
-    width: 78%;
+    width: 80%;
 
     h4 {
-      padding-top: .2em;
-      line-height: 1.3;
+      padding-top: .18em;
+      line-height: 1.2;
     }
 
     a {
@@ -263,4 +252,39 @@ body {
       font-weight: 200;
     }
   }
+}
+
+.email-us {
+  margin-top: 2em;
+}
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: space-between;
+  height: 22em;
+  margin: 2em -1em;
+
+  .link-card {
+    max-width: 18em;
+    transition: all .3s;
+    padding: 1em;
+    &:hover {
+      transform: translate(0px, -8px);
+    }
+    .card-img-top {
+      max-width: 16em;
+
+      img {
+        max-width: 18em;
+        max-height: 14em;
+      }
+    }
+    p {
+      color: black;
+      margin-top: 1em;
+    }
+  }
+
 }
