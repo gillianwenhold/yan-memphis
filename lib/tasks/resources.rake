@@ -153,5 +153,8 @@ namespace :resources do
       { name: "Recursos Durante COVID-19", about: "Este sitio web está completamente en español y tiene una variedad de recursos diferentes que se encuentran a nivel nacional y en español.", details: "El sitio web proporciona hojas de Excel que enumeran todos los recursos y sus enlaces en español e inglés.", link: "https://901iris.wixsite.com/recursosenmemphis", link_text: "Visite aquí para obtener más información:", link_2: "https://docs.google.com/forms/d/e/1FAIpQLSdNnw7jhMgsbxqN1CSyr6F-ttGQHEVTR5xfsXWJd0S7qP1luA/viewform", link_text_2: "También puede agregar recursos que conoce en este enlace", category: "legit_info", published: true, language: "spanish"},
       { name: "Bilingual Memphis COVID-19 Sitio web informativo", image: "recursos_en_espanol.png", about: "Una lista de recursos disponibles en inglés y español.", details: "Si usted sabe de un recurso que podría ayudar a otros , lo puede agregar a la lista . Y si usted está en necesidad de recursos (comida , empleo, cuidado de la salud) puede ver y usar los recursos que otros han contribuido. Esta lista de recursos depende de quienes contribuyan. Agregue todos los recursos (alimentos, empleo, artículos de emergencia, etc.) que conozca.", link: "https://901iris.wixsite.com/recursosenmemphis?fbclid=IwAR0yx5-Sl2jSrv4484p-VdoNTuVyqrJbuS7BHKnkUVEnH1Q4HvlxHZoo_XI", link_text: "https://901iris.wixsite.com/recursosenmemphis?fbclid=IwAR0yx5-Sl2jSrv4484p-VdoNTuVyqrJbuS7BHKnkUVEnH1Q4HvlxHZoo_XI", category: "legit_info", published: true, language: "spanish" }
     ])
+
+    Resource.find_by(name: "Information and Resources in Spanish")&.destroy
+    Resource.find_by(name: "Información y recursos en Español")&.update(image: "Information_and_resources_in_Spanish.jpg")
   end
 end
