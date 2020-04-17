@@ -44,110 +44,162 @@ span {
   line-height: 1.5;
 }
 
-/* ------------------ NAVBAR & FOOTER ------------------ */
+/* ------------------ MAIN CONTENT ------------------ */
 
 body {
   margin: 0;
-}
-
-.contentContainer {
-  min-height: calc(100vh - 5em);
-  overflow-y: scroll;
-
-  .yanNavbar {
-    padding: 1em 3em;
-    display: flex;
-    background-color: #000000;
-    color: #FFFFFF;
-    & > .siteTitle {
-      float: left;
-      max-width: 22%;
-      & > a {
-        font-weight: medium;
-        line-height: 1.2em;
-        font-size: 1.5em;
-        text-decoration: none;
-        color: #FFFFFF;
-        &:hover {
-          color: #1F7A8C;
-        }
-      }
-    }
-    ul {
-      list-style-type: none;
-      margin-left: auto;
-      padding-top: 1em;
-      li {
-        float: right;
-        a {
+  
+  .contentContainer {
+    min-height: calc(100vh - 5em);
+    overflow-y: scroll;
+  
+    .yanNavbar {
+      padding: 1em 3em;
+      display: flex;
+      background-color: #000000;
+      color: #FFFFFF;
+      & > .siteTitle {
+        float: left;
+        max-width: 22%;
+        & > a {
+          font-weight: medium;
+          line-height: 1.2em;
+          font-size: 1.5em;
           text-decoration: none;
-          display: inline-block;
-          font-size: 1em;
-          font-weight: 200;
-          text-transform: uppercase;
           color: #FFFFFF;
-          text-align: center;
-          vertical-align: bottom;
-          padding-left: 2em;
-          letter-spacing: 0.15em;
           &:hover {
             color: #1F7A8C;
           }
         }
       }
+      ul {
+        list-style-type: none;
+        margin-left: auto;
+        padding-top: 1em;
+        li {
+          float: right;
+          a {
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            font-weight: 200;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-align: center;
+            vertical-align: bottom;
+            padding-left: 2em;
+            letter-spacing: 0.15em;
+            &:hover {
+              color: #1F7A8C;
+            }
+          }
+        }
+      }
+    }
+  
+    .mainContent {
+      padding: 2em 10em;
+
+      .intro-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: flex-start;
+        height: 22em;
+        margin: 2em -1em;
+        .link-card {
+          width: 18em;
+          transition: all .3s;
+          padding: 1em;
+          &:hover {
+            transform: translate(0px, -8px);
+          }
+          .card-img-top {
+            max-width: 16em;
+            img {
+              max-width: 16em;
+              max-height: 14em;
+            }
+          }
+          p {
+            color: black;
+            margin-top: 1em;
+          }
+        }
+      }
+  
+      .resourceRow {
+        display: flex;
+        padding: 2em 0;
+        border-bottom: .05em solid gray;
+        .resourceImage {
+          position: inline-block;
+          width: 20%;
+          padding-top: 2em;
+          img {
+            width: 90%;
+          }
+        }
+        .resourceInfo {
+          position: inline-block;
+          padding-left: 2em;
+          width: 80%;
+          h4 {
+            padding-top: .18em;
+            line-height: 1.2;
+          }
+          a {
+            font-weight: 300;
+          }
+          p, span {
+            font-weight: 200;
+          }
+        }
+      }
     }
   }
-
-  .mainContent {
-    padding: 2em 10em;
+  
+  .yanFooter {
+    width: 100%;
+    height: 5em;
+    bottom: 0;
+    position: relative;
+    display: flex;
+    margin-top: 2em;
+    background-color: #000000;
+    &Text {
+      color: #FFFFFF;
+      margin: auto;
+      font-size: .8em;
+      float: right;
+      font-weight: 200;
+      letter-spacing: 0.2em;
+    }
   }
-}
-
-.yanFooter {
-  width: 100%;
-  height: 5em;
-  bottom: 0;
-  position: relative;
-  display: flex;
-  margin-top: 2em;
-  background-color: #000000;
-  &Text {
-    color: #FFFFFF;
-    margin: auto;
-    font-size: .8em;
+  
+  button.toggle-language {
     float: right;
-    font-weight: 200;
-    letter-spacing: 0.2em;
-  }
-}
-
-button {
-  a {
-    font-weight: 500 !important;
-  }
-  &:hover {
     a {
-      color: white;
-      text-decoration: none;
+      font-weight: 500 !important;
+    }
+    &:hover {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    &.show-page {
+      margin-top: .5em;
     }
   }
 }
 
 /* ------------------ TEXT & BUTTONS ------------------ */
-.title {
-  display: inline-block;
-  margin: 0;
-}
-
-.project-card {
-  margin-bottom: 5em;
-}
-
-.project-header {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
 .btn {
   text-decoration: none;
   display: inline-block;
@@ -177,136 +229,88 @@ button {
   }
 }
 
-
-
-.resourceRow {
-  display: flex;
-  padding: 2em 0;
-  border-bottom: .05em solid gray;
-
-  .resourceImage {
-    position: inline-block;
-    width: 20%;
-    padding-top: 2em;
-
-    img {
-      width: 90%;
-    }
-  }
-
-  .resourceInfo {
-    position: inline-block;
-    padding-left: 2em;
-    width: 80%;
-
-    h4 {
-      padding-top: .18em;
-      line-height: 1.2;
-    }
-
-    a {
-      font-weight: 300;
-    }
-
-    p, span {
-      font-weight: 200;
-    }
-  }
-}
-
 .email-us {
   margin-top: 2em;
 }
 
-.card-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  height: 22em;
-  margin: 2em -1em;
-
-  .link-card {
-    width: 18em;
-    transition: all .3s;
-    padding: 1em;
-    &:hover {
-      transform: translate(0px, -8px);
-    }
-    .card-img-top {
-      max-width: 16em;
-
-      img {
-        max-width: 16em;
-        max-height: 14em;
-      }
-    }
-    p {
-      color: black;
-      margin-top: 1em;
-    }
-  }
-}
-
 /* ------------------ MOBILE ------------------ */
 @media only screen and (max-width: 600px) {
-  .footer {
-    margin-bottom: 0px;
-    &Text {
-      font-weight: 300;
-      color: white;
-      text-align: center;
-      padding-top: 2.5em;
-      margin: 0;
-    }
-  }
-  .contentContainer {
-    .mainContent {
-      padding: 2em;
-
-      span {
-        font-weight: 300;
-      }
-
-      .resourceRow {
-        display: inline-block;
-        padding: 1em 0;
-        border-bottom: .05em solid gray;
-      
-        .resourceImage {
-          margin: auto;
-          width: 80%;
+  body {
+    .contentContainer {
+      height: 100%;
+      overflow-y: scroll;   
+  
+      .yanNavbar {
+        padding: .75em 1.25em;
+        & > .siteTitle {
+          margin-top: .25em;
+          float: left;
+          max-width: 40%;
+          & > a {
+            font-weight: 500;
+            line-height: 1em;
+            font-size: 1em;
+          }
         }
-      
-        .resourceInfo {
-          position: inline-block;
-          margin: auto;
-          width: 90%;
-      
-          h4 {
-            padding-top: .18em;
-            line-height: 1.2;
+        ul li a {
+          font-size: 1em;
+          font-weight: 300;
+          padding-left: 1em;
+          letter-spacing: 0.15em;
+        }
+      }
+  
+      .mainContent {
+        padding: 2em;
+        span {
+          font-weight: 300;
+        }
+        .card-box {
+          justify-content: center;
+          margin: 0;
+        }
+        .resourceRow {
+          width: 100%;
+          border-bottom: .05em solid gray;
+          flex-direction: column;
+          .resourceImage {
+            margin: auto;
+            width: 80%;
+            margin-bottom: 1em;
           }
-      
-          a, p, span {
-            font-weight: 300;
+          .resourceInfo {
+            position: inline-block;
+            margin: auto;
+            width: 90%;
+            h4 {
+              padding-top: .18em;
+              line-height: 1.2;
+            }
+            a, p, span {
+              font-weight: 300;
+            }
           }
+        }
+      }
+  
+      button.toggle-language {
+        float: none;
+        margin: 0;
+        &.show-page {
+          margin-top: .5em;
         }
       }
     } 
-
-    .yanNavbar {
-      & > .siteTitle {
-        float: left;
-        max-width: 50%;
-      }
-      ul li a {
+  
+    .footer {
+      margin-bottom: 0px;
+      &Text {
         font-weight: 300;
-        margin-bottom: .5em;
+        color: white;
+        text-align: center;
+        padding-top: 2.5em;
+        margin: 0;
       }
     }
-  }
-  .card-box {
-    justify-content: center;
   }
 }
