@@ -165,27 +165,6 @@ body {
   }
 }
 
-/* ------------------ MOBILE ------------------ */
-@media only screen and (max-width: 600px) {
-  .footer {
-    margin-bottom: 0px;
-    &Text {
-      font-weight: 300;
-      color: white;
-      text-align: center;
-      padding-top: 2.5em;
-      margin: 0;
-    }
-  }
-  .contentContainer {
-    .mainContent {
-      padding: 2em;
-    } 
-  }
-  .card-box {
-    justify-content: center;
-  }
-}
 
 
 .resourceRow {
@@ -230,7 +209,6 @@ body {
 .card-box {
   display: flex;
   flex-wrap: wrap;
-  align-items: space-between;
   justify-content: space-between;
   height: 22em;
   margin: 2em -1em;
@@ -255,5 +233,33 @@ body {
       margin-top: 1em;
     }
   }
+}
 
+/* ------------------ MOBILE ------------------ */
+@media only screen and (max-width: 600px) {
+  .footer {
+    margin-bottom: 0px;
+    &Text {
+      font-weight: 300;
+      color: white;
+      text-align: center;
+      padding-top: 2.5em;
+      margin: 0;
+    }
+  }
+  .contentContainer {
+    .mainContent {
+      padding: 2em;
+    } 
+
+    .yanNavbar {
+      & > .siteTitle {
+        float: left;
+        max-width: 50%;
+      }
+    }
+  }
+  .card-box {
+    justify-content: center;
+  }
 }
