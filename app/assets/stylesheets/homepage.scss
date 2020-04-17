@@ -166,46 +166,7 @@ body {
 }
 
 /* ------------------ MOBILE ------------------ */
-@media screen and (max-width: 600px) {
-  .container {
-    padding: 2em 2.5em;
-  }
-  .navbar-text {
-    font-weight: 300;
-  }
-
-  .navbar-text-small {
-    font-weight: 300;
-    margin-left: -5px;
-  }
-
-  .layer {
-    margin-top: -2px;
-    height: 502px;
-  }
-
-  .navbar-text {
-    margin-top: .3em;
-    font-size: .85em;
-  }
-
-  .navbar-head {
-    font-size: 1.2em;
-  }
-
-  .col-1 {
-    width: 55%;
-  }
-
-  .col-2 {
-    width: 45%;
-  }
-
-  .background-title {
-    font-size: 2em;
-    margin-top: 6em;
-  }
-
+@media only screen and (max-width: 600px) {
   .footer {
     margin-bottom: 0px;
     &Text {
@@ -215,6 +176,14 @@ body {
       padding-top: 2.5em;
       margin: 0;
     }
+  }
+  .contentContainer {
+    .mainContent {
+      padding: 2em;
+    } 
+  }
+  .card-box {
+    justify-content: center;
   }
 }
 
