@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "homepage#index"
+  # root "homepage#index"
+  root "homepage#covid_resources"
   get "/covid_resources" => "homepage#covid_resources"
   get "/covid_resources/es" => "homepage#es_covid_resources"
   get "/home" => "homepage#home"
