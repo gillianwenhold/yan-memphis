@@ -254,7 +254,7 @@ body {
       span {
         font-weight: 300;
       }
-      
+
       .resourceRow {
         display: inline-block;
         padding: 1em 0;
@@ -275,11 +275,7 @@ body {
             line-height: 1.2;
           }
       
-          a {
-            font-weight: 300;
-          }
-      
-          p, span {
+          a, p, span {
             font-weight: 300;
           }
         }
@@ -290,6 +286,10 @@ body {
       & > .siteTitle {
         float: left;
         max-width: 50%;
+      }
+      ul li a {
+        font-weight: 300;
+        margin-bottom: .5em;
       }
     }
   }
