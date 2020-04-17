@@ -250,6 +250,40 @@ body {
   .contentContainer {
     .mainContent {
       padding: 2em;
+
+      span {
+        font-weight: 300;
+      }
+      
+      .resourceRow {
+        display: inline-block;
+        padding: 1em 0;
+        border-bottom: .05em solid gray;
+      
+        .resourceImage {
+          margin: auto;
+          width: 80%;
+        }
+      
+        .resourceInfo {
+          position: inline-block;
+          margin: auto;
+          width: 90%;
+      
+          h4 {
+            padding-top: .18em;
+            line-height: 1.2;
+          }
+      
+          a {
+            font-weight: 300;
+          }
+      
+          p, span {
+            font-weight: 300;
+          }
+        }
+      }
     } 
 
     .yanNavbar {
