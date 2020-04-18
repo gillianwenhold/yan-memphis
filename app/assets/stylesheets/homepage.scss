@@ -267,7 +267,7 @@ body {
 
 /* ------------------ MOBILE ------------------ */
 @media only screen and (max-width: 800px) {
-  .mainContent {
+  body .contentContainer .mainContent {
     padding: 2em 5em;
   }
 }
