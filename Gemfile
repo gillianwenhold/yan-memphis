@@ -12,6 +12,7 @@ gem 'pg'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'react-rails'
 gem 'sass-rails', '~> 5.0'
+gem "simple_form"
 gem 'sprockets'
 gem 'sprockets-rails'
 gem 'turbolinks', '~> 5'

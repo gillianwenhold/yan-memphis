@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # root "homepage#index"
-  root "homepage#covid_resources"
+  get "/" => "responses#new"
+  # root "homepage#covid_resources"
   get "/covid_resources" => "homepage#covid_resources"
   get "/covid_resources/es" => "homepage#es_covid_resources"
   get "/home" => "homepage#home"
@@ -29,4 +29,6 @@ Rails.application.routes.draw do
   get "/undocumented_resources/es" => "resources#es_undocumented_resources"
   get "/lgbt/es" => "resources#es_lgbt"
   get "/unsafe_home/es" => "resources#es_unsafe_home"
+  resource :responses, only: %i[new create]
+  resources :options, only: %i[show]
 end

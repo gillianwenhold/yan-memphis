@@ -1,0 +1,9 @@
+<div class='vw-100 vh-100 d-flex align-items-center justify-content-center'>
+  <h1>Welcome to the Youth Responding to COVID-19 Website!</h1>
+  <p class='lead'><%= @poll.title %> Please select your top choice.</p>
+  <%= simple_form_for @response do |form| %>
+    <%= form.hidden_field :poll_id, value: @poll.id %>
+    <%= form.input :option_id, as: :radio_buttons, collection: @options_collection, label: "" %>
+    <%= form.submit "Submit", class: "btn custom-button mt-0" %>
+  <% end %>
+</div>
