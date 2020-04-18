@@ -330,14 +330,18 @@ body {
         }
       }
 
-      .footer {
-        margin-top: auto;
+      .yanFooter {
+        height: 6em;
+        padding: 0 .5em;
+
         &Text {
-          font-weight: 300;
-          color: white;
-          text-align: center;
-          padding-top: 2.5em;
-          margin: 0;
+          max-width: 60%;
+          margin: auto 0.01em auto auto;
+        }
+
+        img {
+          padding: .5em;
+          height: 70%;
         }
       }
     } 
