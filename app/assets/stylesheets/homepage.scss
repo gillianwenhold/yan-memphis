@@ -266,8 +266,22 @@ body {
 }
 
 /* ------------------ MOBILE ------------------ */
+@media only screen and (max-width: 800px) {
+  .mainContent {
+    padding: 2em 5em;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   body {
+    .btn { 
+      margin: auto 0 auto auto;
+      border: 1.75px solid $bb-blue;
+      padding: .65em .8em;
+    }
+
+
+
     .contentContainer {
       .yanNavbar {
         padding: .75em 1.25em;
@@ -336,7 +350,7 @@ body {
 
         &Text {
           max-width: 60%;
-          margin: auto 0.01em auto auto;
+          margin: auto 0 auto auto;
         }
 
         img {
