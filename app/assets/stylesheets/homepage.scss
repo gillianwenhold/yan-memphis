@@ -182,6 +182,21 @@ body {
           font-weight: 500; 
         }
       }
+      ol.next-steps {
+        li {
+          font-weight: 200;
+          margin-bottom: 1.25em;
+          font-size: 1.25em;
+          padding-left: 1em;
+          margin-left: -1em;
+
+          & > p {
+            font-weight: 200;
+            margin-bottom: 0;
+          }
+        }
+      }
+
       .card-box {
         display: flex;
         flex-direction: row;

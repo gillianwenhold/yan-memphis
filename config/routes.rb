@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "/" => "responses#new"
   # root "homepage#covid_resources"
   get "/covid_resources" => "homepage#covid_resources"
+  get "/next_steps" => "homepage#next_steps"
   get "/covid_resources/es" => "homepage#es_covid_resources"
   get "/home" => "homepage#home"
   get "/home/es" => "homepage#es_home"

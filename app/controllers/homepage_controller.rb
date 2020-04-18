@@ -8,9 +8,12 @@ class HomepageController < ApplicationController
   end
 
   def covid_resources; end
+  
+  def es_covid_resources; end
 
   def home; end
 
-  def es_covid_resources; end
   def es_home; end
+
+  def next_steps; end
 end
