@@ -276,15 +276,19 @@ body {
       letter-spacing: 0.2em;
       max-width: 30%;
     }
-  
     img {
       object-fit: contain;
       margin-top: auto;
       margin-bottom: auto;
+      min-width: 50px;
+      min-height: 50px;
       display: inline-block;
       padding: .5em 1em;
       height: 80%;
     }
+  }
+  .yanFooterMobile {
+    display: none;
   }
 }
 
@@ -302,9 +306,6 @@ body {
       border: 1.75px solid $bb-blue;
       padding: .65em .8em;
     }
-
-
-
     .contentContainer {
       .yanNavbar {
         padding: .75em 1.25em;
@@ -366,19 +367,36 @@ body {
           }
         }
       }
-
       .yanFooter {
-        height: 6em;
-        padding: 0 .5em;
-
+        width: 100%;
+        height: 8em;
+        background-color: $dark-gray;
+        display: flex;
+        vertical-align: middle;
+        justify-content: center;
+      
         &Text {
-          max-width: 60%;
-          margin: auto 0 auto auto;
+          display: none;
         }
-
         img {
-          padding: .5em;
-          height: 70%;
+          object-fit: contain;
+          min-width: 50px;
+          min-height: 50px;
+          display: inline;
+          padding: .5em 1em;
+        }
+      }
+      .yanFooterMobile {
+        display: block;
+        background-color: $dark-gray;
+        p {
+          color: #FFFFFF;
+          width: 100%;
+          font-size: .8em;
+          text-align: center;
+          margin: 0 auto 2em auto;
+          font-weight: 200;
+          letter-spacing: 0.2em;
         }
       }
     } 
